@@ -38,7 +38,7 @@ public class Blitzcrank {
         BufferedImage imagexd = robotAwt.createScreenCapture(new Rectangle(screenSize.width, screenSize.height));
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        ImageIO.write(imagexd, "jpg", baos);
+        ImageIO.write(imagexd, type.replace(".", ""), baos);
         byte[] bytes = baos.toByteArray();
 
         OutputStream out = new FileOutputStream(file);
