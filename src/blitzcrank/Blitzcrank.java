@@ -31,10 +31,8 @@ public class Blitzcrank {
         String name = "capture" + stringfyCurrent;
         String type = ".jpg";
         //--
-        Robot robotAwt = new Robot();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         File file = new File(path + name + type);
-        BufferedImage imagexd = robotAwt.createScreenCapture(new Rectangle(screenSize.width, screenSize.height));
+        BufferedImage imagexd = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ImageIO.write(imagexd, type.replace(".", ""), baos);
